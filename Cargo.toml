@@ -1,0 +1,18 @@
+[package]
+name = "blockchain-rs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+actix-web = "4.9.0"
+async-trait = "0.1.72"
+chrono = { version = "0.4.39", features = ["serde"] }
+env_logger = "0.11.6"
+log = "0.4.20"
+rust_decimal = "1.36.0"
+serde = { version = "1.0.217", features = ["derive"] }
+serde_with = "2.0"
+serde_json = "1.0.108"
+aes = "0.8"
+block-modes = "0.8"
+openssl = "0.10.70"
