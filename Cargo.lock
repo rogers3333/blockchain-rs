@@ -411,6 +411,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "block-cipher"
+version = "0.7.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "fa136449e765dc7faa244561ccae839c394048667929af599b5d931ebe7b7f10"
+dependencies = [
+ "generic-array",
+]
+
+[[package]]
 name = "block-modes"
 version = "0.8.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -435,7 +444,9 @@ dependencies = [
  "async-trait",
  "block-modes",
  "chrono",
+ "des",
  "env_logger",
+ "generic-array",
  "lazy_static",
  "log",
  "num-bigint",
@@ -446,6 +457,7 @@ dependencies = [
  "serde_json",
  "serde_with",
  "sha2",
+ "typenum",
 ]
 
 [[package]]
@@ -728,6 +740,17 @@ dependencies = [
  "quote",
  "rustc_version",
  "syn 2.0.98",
+]
+
+[[package]]
+name = "des"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4e6f17f2850a27f147a228d342a95bf3c613934464d77d531fe8d5151ccd9362"
+dependencies = [
+ "block-cipher",
+ "byteorder",
+ "opaque-debug",
 ]
 
 [[package]]
@@ -1354,6 +1377,12 @@ name = "once_cell"
 version = "1.20.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1261fe7e33c73b354eab43b1273a57c8f967d0391e80353e51f764ac02cf6775"
+
+[[package]]
+name = "opaque-debug"
+version = "0.2.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2839e79665f131bdb5782e51f2c6c9599c133c6098982a54c794358bf432529c"
 
 [[package]]
 name = "openssl"
