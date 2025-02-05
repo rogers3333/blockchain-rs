@@ -7,10 +7,14 @@ fn test_aes_ecb() {
 
     // 加密
     let encrypted = aes_encode(key, data).unwrap();
+    println!("加密字节: {:?}", encrypted);
     assert_ne!(encrypted, data);
 
     // 解密
     let decrypted = aes_decode(key, &encrypted).unwrap();
+    //打印解密后的数据
+    println!("解密字节: {:?}", decrypted);
+    println!();
     assert_eq!(decrypted, data);
 }
 
